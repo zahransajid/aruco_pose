@@ -149,4 +149,5 @@ def test_pose_4markers(test_images_dir: str, interval: int = 10):
 
 if __name__ == "__main__":
     test_detect_4markers2(r"frames_limited\0247.jpg")
+    test_detect_4markers(r"frames_limited\0247.jpg")
     test_pose_4markers(r"frames_limited/", interval=2)
