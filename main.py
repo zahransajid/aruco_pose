@@ -80,7 +80,6 @@ def test_detect_4markers2(test_img: str):
             (0, 255, 255),
             7,
         )
-        print("[INFO] ArUco marker ID: {}".format(markerID))
 
     cv2.namedWindow("Image", cv2.WINDOW_NORMAL)
     cv2.imshow("Image", img)
@@ -98,7 +97,6 @@ def test_pose_4markers(test_images_dir: str, interval: int = 10):
         results = est.run(img)
         print(f"processing image {no}")
         if results:
-            print(results["cam_pos"])
             upVector = np.array([[0, 0, 0], [0, 0, 3]], dtype=np.float32)
             leftVector = np.array([[0, 0, 0], [0, 3, 0]], dtype=np.float32)
             rightVector = np.array([[0, 0, 0], [3, 0, 0]], dtype=np.float32)
